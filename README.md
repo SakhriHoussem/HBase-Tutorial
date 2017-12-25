@@ -106,7 +106,7 @@ put 'Randonnee', '9', 'InfoRandonnee:suiteRando', 11
  ```
 ### Update TABLE :
 
-Update the distance of the first Randonnee (55 instead of 35). Get the technical information of the Randonnee 1.
+Update the distance of the first Randonnee (55 instead of 35)
 
 ```shell
 put 'Randonnee', 1, 'InfoTechnique:distance', 55
