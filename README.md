@@ -4,7 +4,7 @@
 
 ```shell
 # HBase Shell startup
-Hbase shell
+hbase shell
 ```
 
 ```shell
