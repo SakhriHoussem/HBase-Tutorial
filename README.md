@@ -1,4 +1,4 @@
-# HBaseInPractice
+# HBase in Practice
 
 ## HBaseInPractice
 
@@ -11,11 +11,13 @@
       InfoRandonnee: nomRando, region et suiteRando
       InfoTechnique: distance et denivele
 
-```shell # commande to create table with family columns  
+```shell
+# commande to create table with family columns  
 CREATE 'table_name', 'family_column1','family_column2',....
 ```
 
-```shell # create table with 2 family columns
+```hbase-shell
+# create table with 2 family columns
 CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
 ```
       
@@ -32,7 +34,7 @@ CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
       (9, 'Chrea Azzazga', 'Tizi Ouzou', 6.23, 1548, 11);
 
   We will to write this information in 'Randonnee' table
-
+```shell
       put 'Randonnee', '1', 'InfoRandonnee:nomRando', 'Monts du Djurdjura'
       put 'Randonnee', '1', 'InfoRandonnee:region', 'Tizi Ouzou'
       put 'Randonnee', '1', 'InfoTechnique:distance', 35
@@ -81,3 +83,4 @@ CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
       put 'Randonnee', '9', 'InfoTechnique:distance', 6.23
       put 'Randonnee', '9', 'InfoTechnique:denivele', 1548
       put 'Randonnee', '9', 'InfoRandonnee:suiteRando', 11
+ ```
