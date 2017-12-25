@@ -41,7 +41,7 @@ DESCRIBE 'table_name'
 
       Randonnee(idRando, nomRando, region, distance , denivele, suiteRando)
 
-#### devide 'Randonnee' TABLE on 2 family column :
+#### Divide 'Randonnee' TABLE on 2 family column :
 
       InfoRandonnee: nomRando, region et suiteRando
       InfoTechnique: distance et denivele
@@ -137,7 +137,7 @@ Update the distance of the first Randonnee (55 instead of 35)
 ```shell
 put 'Randonnee', 1, 'InfoTechnique:distance', 55
 ```
-### get From TABLE :
+### Get From TABLE :
 
 ```shell
 # for a single line
@@ -163,7 +163,7 @@ get InfoRandonnee of Randonnee 5.
 ```shell
 get 'Randonnee', 5, 'InfoRandonnee'
 ```
-### use FILTER : 
+### Use FILTER : 
 [Filters In Hbase Shell Tutorial](http://www.hadooptpoint.org/filters-in-hbase-shell/)
 
 ```shell
