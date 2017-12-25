@@ -145,10 +145,19 @@ get the distance of the Randonnee 'Murdjadu Mountain'
 scan 'Randonnee',{FILTER=>"
 	SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
 	AND ColumnPrefixFilter ('distance')
-	"}```
+	"}
+```
 ```shell
 scan 'Randonnee',{FILTER=>
-	"SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
-	AND QualifierFilter(=,'binary:distance')
-	"}```
+		"SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
+		AND QualifierFilter(=,'binary:distance')
+	"}
+```
+```shell
+scan 'Randonnee',{FILTER=>
+		"SingleColumnValueFilter('InfoRandonnee', 'region', =,'binary:Tizi Ouzou')
+		AND QualifierFilter(=,'binary:distance') 
+	"}
+```
+
 
