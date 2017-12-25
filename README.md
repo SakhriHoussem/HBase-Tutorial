@@ -110,6 +110,45 @@ put 'Randonnee', '9', 'InfoRandonnee:suiteRando', 11
 Update the distance of the first Randonnee (55 instead of 35). Get the technical information of the Randonnee 1.
 
 ```shell
-	put 'Randonnee', 1, 'InfoTechnique:distance', 55
+put 'Randonnee', 1, 'InfoTechnique:distance', 55
 ```
+### get From TABLE :
+
+```shell
+# for a single line
+get 'table_name', 'id'
+get 'table_name', 'id', 'family'
+get 'table_name', 'id', 'family:colonne'
+get 'table_name', 'id', {COLUMN=>'family'}
+get 'table_name', 'id', {COLUMN=>'family:colonne'}
+```
+```shell
+# for a several line
+1- scan 'table_name'
+2- scan 'table_name', {COLUMN=>['family']}
+3- scan 'table_name', {COLUMN=>['family:colonne']}
+```
+get from TABLE Randonnee 4
+
+```shell
+get 'Randonnee', '4'
+```
+get InfoRandonnee of Randonnee 5.
+
+```shell
+get 'Randonnee', 5, 'InfoRandonnee'
+```
+
+get the distance of the Randonnee 'Murdjadu Mountain'
+
+```shell
+scan 'Randonnee',{FILTER=>"
+	SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
+	AND ColumnPrefixFilter ('distance')
+	"}```
+```shell
+scan 'Randonnee',{FILTER=>
+	"SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
+	AND QualifierFilter(=,'binary:distance')
+	"}```
 
