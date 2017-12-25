@@ -153,7 +153,7 @@ show the list of filters available in HBase
 ```shell
 show_filters
 ```
-http://www.hadooptpoint.org/filters-in-hbase-shell/
+[Filters In Hbase Shell Tutorial](http://www.hadooptpoint.org/filters-in-hbase-shell/)
 
 get the distance of the Randonnee 'Murdjadu Mountain'
 
