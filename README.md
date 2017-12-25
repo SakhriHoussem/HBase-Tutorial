@@ -2,15 +2,15 @@
 
 ## HBaseInPractice
 
-### Create TABLE Randonnee :  
+### Create HBase TABLE Randonnee :  
 
 ```shell
-# commande to create TABLE with family columns  
+# commande to create HBase TABLE with family columns  
 CREATE 'table_name', 'family_column1','family_column2',....
 ```
 
 ```shell
-# show TABLE structure
+# show HBase TABLE structure
 DESCRIBE 'table_name'
 ```
 
@@ -138,12 +138,28 @@ get InfoRandonnee of Randonnee 5.
 ```shell
 get 'Randonnee', 5, 'InfoRandonnee'
 ```
+### use FILTER :
+
+```shell
+# for a single line
+get 'table_name', 'id', {FILTER=>"filter"}
+```
+or :
+```shell 
+# for a several line
+scan 'table_name', {FILTER=>"filter"}
+```
+show the list of filters available in HBase
+```shell
+show_filters
+```
+http://www.hadooptpoint.org/filters-in-hbase-shell/
 
 get the distance of the Randonnee 'Murdjadu Mountain'
 
 ```shell
-scan 'Randonnee',{FILTER=>"
-	SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
+scan 'Randonnee',{FILTER=>
+	"SingleColumnValueFilter('InfoRandonnee', 'nomRando', =,'binary:Montagne de Murdjadju')
 	AND ColumnPrefixFilter ('distance')
 	"}
 ```
@@ -153,6 +169,9 @@ scan 'Randonnee',{FILTER=>
 		AND QualifierFilter(=,'binary:distance')
 	"}
 ```
+
+get the distance of the Randonnee in the region of 'Tizi Ouzou'.
+
 ```shell
 scan 'Randonnee',{FILTER=>
 		"SingleColumnValueFilter('InfoRandonnee', 'region', =,'binary:Tizi Ouzou')
