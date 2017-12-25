@@ -1,10 +1,11 @@
 # HBase in Practice
 
-## Learn How HBase Work in Simple Exemple
+## Learn How HBase Work in Simple Example
 
 ```shell
 # HBase Shell startup
-Hbase shell```
+Hbase shell
+```
 
 ```shell
 # get Hbase Shell commande list 
@@ -17,12 +18,12 @@ list
 ```
 
 ```shell
-# if a table exists in HBase
+# if a TABLE exists in HBase
 exists 'table_name'
 ```
 
 ```shell
-#  Hbase Shell shutdown
+# Hbase Shell shutdown
 exit
 ```
 
