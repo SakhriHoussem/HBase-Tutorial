@@ -138,7 +138,8 @@ get InfoRandonnee of Randonnee 5.
 ```shell
 get 'Randonnee', 5, 'InfoRandonnee'
 ```
-### use FILTER :
+### use FILTER : 
+[Filters In Hbase Shell Tutorial](http://www.hadooptpoint.org/filters-in-hbase-shell/)
 
 ```shell
 # for a single line
@@ -153,7 +154,7 @@ show the list of filters available in HBase
 ```shell
 show_filters
 ```
-[Filters In Hbase Shell Tutorial](http://www.hadooptpoint.org/filters-in-hbase-shell/)
+
 
 get the distance of the Randonnee 'Murdjadu Mountain'
 
