@@ -1,5 +1,30 @@
 # HBase in Practice
 
+## Learn How HBase Work in Simple Exemple
+
+```shell
+# HBase Shell startup
+Hbase shell```
+
+```shell
+# get Hbase Shell commande list 
+table_help
+```
+
+```shell
+# show TABLES in HBase Shell
+list
+```
+
+```shell
+# if a table exists in HBase
+exists 'table_name'
+```
+
+```shell
+#  Hbase Shell shutdown
+exit
+```
 
 ### Create HBase TABLE Randonnee :  
 
