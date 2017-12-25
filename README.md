@@ -2,26 +2,38 @@
 
 ## HBaseInPractice
 
-### Create table Randonnee :  
+### Create TABLE Randonnee :  
 
 ```shell
-# commande to create table with family columns  
+# commande to create TABLE with family columns  
 CREATE 'table_name', 'family_column1','family_column2',....
+```
+
+```shell
+# show TABLE structure
+DESCRIBE 'table_name'
 ```
 
       Randonnee(idRando, nomRando, region, distance , denivele, suiteRando)
 
-#### devide 'Randonnee' table on 2 family column :
+#### devide 'Randonnee' TABLE on 2 family column :
 
       InfoRandonnee: nomRando, region et suiteRando
       InfoTechnique: distance et denivele
 
+commande : 
 ```shell
 # create table with 2 family columns
 CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
 ```
       
-  Create a table containing the following information:
+#### Write in 'Randonnee' TABLE :
+
+```shell
+      # write in TABLE 
+      put 'table_name', 'id', 'family_column:column', 'value'
+```
+We will to write this information in 'Randonnee' TABLE
       
       (1, 'Monts du Djurdjura', 'Tizi Ouzou', 35, 1000, NULL);
       (2, 'Circuit de Misserghin', 'Oran', 25 , 514, NULL);
@@ -33,7 +45,8 @@ CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
       (8, 'Feroukha', 'Blida', 14.18, 454, NULL);
       (9, 'Chrea Azzazga', 'Tizi Ouzou', 6.23, 1548, 11);
 
-  We will to write this information in 'Randonnee' table
+commande : 
+
 ```shell
       put 'Randonnee', '1', 'InfoRandonnee:nomRando', 'Monts du Djurdjura'
       put 'Randonnee', '1', 'InfoRandonnee:region', 'Tizi Ouzou'
