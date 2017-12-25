@@ -143,15 +143,15 @@ put 'Randonnee', 1, 'InfoTechnique:distance', 55
 # for a single line
 get 'table_name', 'id'
 get 'table_name', 'id', 'family'
-get 'table_name', 'id', 'family:colonne'
+get 'table_name', 'id', 'family:column'
 get 'table_name', 'id', {COLUMN=>'family'}
-get 'table_name', 'id', {COLUMN=>'family:colonne'}
+get 'table_name', 'id', {COLUMN=>'family:column'}
 ```
 ```shell
 # for a several line
 1- scan 'table_name'
 2- scan 'table_name', {COLUMN=>['family']}
-3- scan 'table_name', {COLUMN=>['family:colonne']}
+3- scan 'table_name', {COLUMN=>['family:column']}
 ```
 get from TABLE Randonnee 4
 
