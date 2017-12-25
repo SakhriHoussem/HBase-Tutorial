@@ -1,6 +1,5 @@
 # HBase in Practice
 
-## HBaseInPractice
 
 ### Create HBase TABLE Randonnee :  
 
