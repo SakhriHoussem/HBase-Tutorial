@@ -4,6 +4,11 @@
 
 ### Create table Randonnee :  
 
+```shell
+# commande to create table with family columns  
+CREATE 'table_name', 'family_column1','family_column2',....
+```
+
       Randonnee(idRando, nomRando, region, distance , denivele, suiteRando)
 
 #### devide 'Randonnee' table on 2 family column :
@@ -12,11 +17,6 @@
       InfoTechnique: distance et denivele
 
 ```shell
-# commande to create table with family columns  
-CREATE 'table_name', 'family_column1','family_column2',....
-```
-
-```hbase-shell
 # create table with 2 family columns
 CREATE 'Randonnee', 'InfoRandonnee','InfoTechnique'
 ```
