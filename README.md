@@ -1,4 +1,4 @@
-# HBase in Practice
+# HBase Tutorial
 
 ## Learn How HBase Work in Simple Example
 
